@@ -14,9 +14,11 @@
 		0D7CE8F222591F510097C674 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D7CE8F022591F510097C674 /* Main.storyboard */; };
 		0D7CE8F422591F530097C674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D7CE8F322591F530097C674 /* Assets.xcassets */; };
 		0D7CE8F722591F530097C674 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D7CE8F522591F530097C674 /* LaunchScreen.storyboard */; };
+		D9B588A55D2B63280A8E7C58 /* Pods_data_avengers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F729833F9F374EA973A371 /* Pods_data_avengers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		050D2898EC19807FE46871CF /* Pods-data-avengers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-data-avengers.debug.xcconfig"; path = "Target Support Files/Pods-data-avengers/Pods-data-avengers.debug.xcconfig"; sourceTree = "<group>"; };
 		0D7CE8E522591F510097C674 /* data-avengers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "data-avengers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7CE8E822591F510097C674 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D7CE8EA22591F510097C674 /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		0D7CE8F322591F530097C674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D7CE8F622591F530097C674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D7CE8F822591F530097C674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31A132A7FC9E26ABB8119B1D /* Pods-data-avengers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-data-avengers.release.xcconfig"; path = "Target Support Files/Pods-data-avengers/Pods-data-avengers.release.xcconfig"; sourceTree = "<group>"; };
+		82F729833F9F374EA973A371 /* Pods_data_avengers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_data_avengers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B588A55D2B63280A8E7C58 /* Pods_data_avengers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0765B724AD5CF5B1AD98E1A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				050D2898EC19807FE46871CF /* Pods-data-avengers.debug.xcconfig */,
+				31A132A7FC9E26ABB8119B1D /* Pods-data-avengers.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		0D7CE8DC22591F510097C674 = {
 			isa = PBXGroup;
 			children = (
 				0D7CE8E722591F510097C674 /* data-avengers */,
 				0D7CE8E622591F510097C674 /* Products */,
+				0765B724AD5CF5B1AD98E1A8 /* Pods */,
+				C5DED1C81C7B6B65E744CBB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +87,14 @@
 			path = "data-avengers";
 			sourceTree = "<group>";
 		};
+		C5DED1C81C7B6B65E744CBB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82F729833F9F374EA973A371 /* Pods_data_avengers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D7CE8FB22591F530097C674 /* Build configuration list for PBXNativeTarget "data-avengers" */;
 			buildPhases = (
+				9479D39F7EC72C82E1AEB69A /* [CP] Check Pods Manifest.lock */,
 				0D7CE8E122591F510097C674 /* Sources */,
 				0D7CE8E222591F510097C674 /* Frameworks */,
 				0D7CE8E322591F510097C674 /* Resources */,
+				781C23CB4B43D5A0BDDCAD31 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		781C23CB4B43D5A0BDDCAD31 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-data-avengers/Pods-data-avengers-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftGoogleTranslate/SwiftGoogleTranslate.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGoogleTranslate.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-data-avengers/Pods-data-avengers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9479D39F7EC72C82E1AEB69A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-data-avengers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0D7CE8E122591F510097C674 /* Sources */ = {
@@ -288,6 +362,7 @@
 		};
 		0D7CE8FC22591F530097C674 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 050D2898EC19807FE46871CF /* Pods-data-avengers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -305,6 +380,7 @@
 		};
 		0D7CE8FD22591F530097C674 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31A132A7FC9E26ABB8119B1D /* Pods-data-avengers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

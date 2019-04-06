@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftGoogleTranslate
 
 class DocumentViewController: UIViewController {
     
