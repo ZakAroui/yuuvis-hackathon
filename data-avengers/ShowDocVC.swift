@@ -12,6 +12,7 @@ import SwiftGoogleTranslate
 class ShowDocVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     let juuv = JuuvisRestClient()
     var yvDoc: YuuvisDoc? = nil
+    var currRow: Int = 0
     
     var pickerData: [String] = [String]()
     
@@ -19,12 +20,12 @@ class ShowDocVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource 
     @IBOutlet weak var languagePick: UIPickerView!
     @IBAction func downloadDoc(_ sender: Any) {
         print("download here")
-        
+
         juuv.downloadDoc(completion: {tms in
             
-        }, yvDoc: yvDoc!)
+        }, yvDoc: yvDoc!, currRow: currRow)
         
-        let alertController = UIAlertController(title: "Successfully Downloaded", message:
+        let alertController = UIAlertController(title: pickerData[currRow]+" Version Successfully Downloaded", message:
             "Your Document Was Successfully Downloaded", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
         
@@ -51,6 +52,13 @@ class ShowDocVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // This method is triggered whenever the user makes a change to the picker selection.
+        // The parameter named row and component represents what was selected.
+        self.currRow = row
+    }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

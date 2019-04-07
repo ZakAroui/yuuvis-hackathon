@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0D5C8DC1225A407000FFD589 /* SearchDocsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C8DC0225A407000FFD589 /* SearchDocsVC.swift */; };
 		0D5C8DC3225A48D100FFD589 /* ShowDocVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C8DC2225A48D100FFD589 /* ShowDocVC.swift */; };
+		0D5C8DC5225A560D00FFD589 /* Contract_DE.pdf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D5C8DC4225A560D00FFD589 /* Contract_DE.pdf */; };
+		0D5C8DC7225A561400FFD589 /* Contract_EN.pdf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D5C8DC6225A561400FFD589 /* Contract_EN.pdf */; };
+		0D5C8DC9225A561C00FFD589 /* Contract_FR.pdf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D5C8DC8225A561B00FFD589 /* Contract_FR.pdf */; };
 		0D7CE8E922591F510097C674 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CE8E822591F510097C674 /* AppDelegate.swift */; };
 		0D7CE8EB22591F510097C674 /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CE8EA22591F510097C674 /* DocumentBrowserViewController.swift */; };
 		0D7CE8ED22591F510097C674 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CE8EC22591F510097C674 /* DocumentViewController.swift */; };
@@ -39,6 +42,9 @@
 			dstSubfolderSpec = 7;
 			files = (
 				0D7CE90E225A1A810097C674 /* testMetadata.json in CopyFiles */,
+				0D5C8DC5225A560D00FFD589 /* Contract_DE.pdf in CopyFiles */,
+				0D5C8DC9225A561C00FFD589 /* Contract_FR.pdf in CopyFiles */,
+				0D5C8DC7225A561400FFD589 /* Contract_EN.pdf in CopyFiles */,
 				0D7CE910225A1AC00097C674 /* Team_Star-Track.jpg in CopyFiles */,
 				0D7CE914225A2C380097C674 /* The Challenges.docx in CopyFiles */,
 			);
@@ -50,6 +56,9 @@
 		050D2898EC19807FE46871CF /* Pods-data-avengers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-data-avengers.debug.xcconfig"; path = "Target Support Files/Pods-data-avengers/Pods-data-avengers.debug.xcconfig"; sourceTree = "<group>"; };
 		0D5C8DC0225A407000FFD589 /* SearchDocsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDocsVC.swift; sourceTree = "<group>"; };
 		0D5C8DC2225A48D100FFD589 /* ShowDocVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDocVC.swift; sourceTree = "<group>"; };
+		0D5C8DC4225A560D00FFD589 /* Contract_DE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Contract_DE.pdf; sourceTree = "<group>"; };
+		0D5C8DC6225A561400FFD589 /* Contract_EN.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Contract_EN.pdf; sourceTree = "<group>"; };
+		0D5C8DC8225A561B00FFD589 /* Contract_FR.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Contract_FR.pdf; sourceTree = "<group>"; };
 		0D7CE8E522591F510097C674 /* data-avengers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "data-avengers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7CE8E822591F510097C674 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D7CE8EA22591F510097C674 /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +108,9 @@
 		0D7CE8DC22591F510097C674 = {
 			isa = PBXGroup;
 			children = (
+				0D5C8DC8225A561B00FFD589 /* Contract_FR.pdf */,
+				0D5C8DC6225A561400FFD589 /* Contract_EN.pdf */,
+				0D5C8DC4225A560D00FFD589 /* Contract_DE.pdf */,
 				0D7CE913225A2C370097C674 /* The Challenges.docx */,
 				0D7CE90F225A1ABF0097C674 /* Team_Star-Track.jpg */,
 				0D7CE90D225A1A810097C674 /* testMetadata.json */,

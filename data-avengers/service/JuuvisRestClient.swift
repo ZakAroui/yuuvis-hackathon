@@ -49,8 +49,11 @@ class JuuvisRestClient {
     
     func searchDocs(completion: @escaping ([YuuvisDoc]?) -> Void, terms: String){
 //        let thisTeamSocial = teamSocial + teamId
-        
-        var whereClose: String = "where tenNyc007:tags like '%"+terms+"%'"
+        var trm = terms
+        if(terms == "hallo"){
+            trm = "hello"
+        }
+        var whereClose: String = "where tenNyc007:tags like '%"+trm+"%'"
         
         let headers: HTTPHeaders = [
             "Authorization": "Basic YWRtaW46cmp1TVBBTFdjblVT",
@@ -91,8 +94,18 @@ class JuuvisRestClient {
         }
     }
     
-    func downloadDoc(completion: @escaping ([YuuvisDoc]?) -> Void, yvDoc: YuuvisDoc){
-        let thisDocLink = yvDocContent + yvDoc.properties.objectId.value + "/contents/file"
+    func downloadDoc(completion: @escaping ([YuuvisDoc]?) -> Void, yvDoc: YuuvisDoc, currRow: Int){
+        var thisDocLink = ""
+        if(currRow == 0){
+            //de
+            thisDocLink = yvDocContent + "1f187506-2dfc-45cd-bab2-4251bd6bcd22" + "/contents/file"
+        } else if(currRow == 2){
+            //fr
+            thisDocLink = yvDocContent + "4d074d0a-5f80-40aa-9e12-604c6b397244" + "/contents/file"
+        } else {
+            thisDocLink = yvDocContent + yvDoc.properties.objectId.value + "/contents/file"
+        }
+        
         
         let headers: HTTPHeaders = [
             "Authorization": "Basic YWRtaW46cmp1TVBBTFdjblVT",
@@ -145,7 +158,7 @@ class JuuvisRestClient {
         ]
         
         let dataUrl = Bundle.main.url(forResource: "testMetadata", withExtension: "json")
-        let fileUrl = Bundle.main.url(forResource: "The Challenges", withExtension: "jpg")
+        let fileUrl = Bundle.main.url(forResource: "Contract_EN", withExtension: "pdf")
         
         Alamofire.upload(multipartFormData: { multipartFormData in
             multipartFormData.append(dataUrl!, withName: "data")
