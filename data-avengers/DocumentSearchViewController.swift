@@ -18,7 +18,7 @@ class DocumentSearchViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -26,7 +26,8 @@ class DocumentSearchViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
+    
     // ------------------Instance Properties ---------------------------
     var queryText: String!
     
@@ -34,10 +35,18 @@ class DocumentSearchViewController: UIViewController {
     @IBOutlet weak var SearchButton: UIButton!
     // --------------------------------------------------------------
     
-    // ------------------Instance Properties ---------------------------
-    func transitionToDisplayResults()
+    // ------------------Instance Methods ---------------------------
+    @IBAction func BeginSearchPressed(_ sender: UIButton) {
+        // initiate our data model instance collection of info
+        // then take info and display
+        transitionToDisplayResults(sender)
+    }
+    
+    
+    
+    func transitionToDisplayResults(_ sender: UIButton)
     { // get documents to display and segue into tableViewcController
-        
+        performSegue(withIdentifier: "SegueToDisplayResults", sender: sender)
     }
     // --------------------------------------------------------------
 }

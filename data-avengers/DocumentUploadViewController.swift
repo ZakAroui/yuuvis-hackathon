@@ -48,8 +48,14 @@ class DocumentUploadViewController: UIViewController, UIDocumentPickerDelegate {
             fatalError("Can choose one document")
         }
         //let documentToUpload = urls.first!
-        UploadModel.documentToUploadUrl = urls.first!
+        UploadModel.documentToUploadUrl = urls.first!  // ----- Save URL to upload model
+        
+        // --------------------------  Displays selected url  ---------------------------------------
+        let documentInteractionController = UIDocumentInteractionController(url: UploadModel.documentToUploadUrl)
+        documentInteractionController.delegate = self
+        documentInteractionController.presentPreview(animated: true)
         print(UploadModel.documentToUploadUrl)
+        // -------------------------------------------------------------------------------------
         
     }
 
@@ -58,3 +64,9 @@ class DocumentUploadViewController: UIViewController, UIDocumentPickerDelegate {
 }
 
 
+extension DocumentUploadViewController: UIDocumentInteractionControllerDelegate
+{ // extension to conforl to delegate that displays URL Choosen
+    func documentInteractionControllerViewControllerForPreview(_ controller: UIDocumentInteractionController) -> UIViewController {
+        return self
+    }
+}
