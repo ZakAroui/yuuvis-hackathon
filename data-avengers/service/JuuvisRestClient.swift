@@ -13,7 +13,7 @@ class JuuvisRestClient {
     
     let yuuvisSearch: String = "https://yuuvis.io/api/dms/objects/search"
     let yvDocMeta: String = "https://yuuvis.io/api/dms/objects/726fe955-b7c7-45f8-a0ce-70e04975cdc7"
-    let yvDocContent: String = "https://yuuvis.io/api/dms/objects/726fe955-b7c7-45f8-a0ce-70e04975cdc7/contents/file"
+    let yvDocContent: String = "https://yuuvis.io/api/dms/objects/"
     let yvDocUpload: String = "https://yuuvis.io/api/dms/objects"
     
     func getDocMeta(completion: @escaping ([YuuvisDoc]?) -> Void, teamId: String){
@@ -91,8 +91,8 @@ class JuuvisRestClient {
         }
     }
     
-    func downloadDoc(completion: @escaping ([YuuvisDoc]?) -> Void, teamId: String){
-        //        let thisTeamSocial = teamSocial + teamId
+    func downloadDoc(completion: @escaping ([YuuvisDoc]?) -> Void, yvDoc: YuuvisDoc){
+        let thisDocLink = yvDocContent + yvDoc.properties.objectId.value + "/contents/file"
         
         let headers: HTTPHeaders = [
             "Authorization": "Basic YWRtaW46cmp1TVBBTFdjblVT",
@@ -101,15 +101,15 @@ class JuuvisRestClient {
             "X-ID-TENANT-NAME": "nyc007"
         ]
         
-//        let destination = DownloadRequest.suggestedDownloadDestination()
+        let dest = DownloadRequest.suggestedDownloadDestination()
         
-        let dest: DownloadRequest.DownloadFileDestination = { _, _ in
-            var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-            documentsURL.appendPathComponent("_yuuvis")
-            return (documentsURL, [.removePreviousFile])
-        }
+//        let dest: DownloadRequest.DownloadFileDestination = { _, _ in
+//            var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+//            documentsURL.appendPathComponent("_yuuvis")
+//            return (documentsURL, [.removePreviousFile])
+//        }
         
-        Alamofire.download(yvDocContent, method: .get, headers: headers, to: dest)
+        Alamofire.download(thisDocLink, method: .get, headers: headers, to: dest)
             .responseJSON { response in
                 guard response.result.isSuccess else {
                     print("couldn't get /content")

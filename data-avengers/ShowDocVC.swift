@@ -21,8 +21,14 @@ class ShowDocVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource 
         print("download here")
         
         juuv.downloadDoc(completion: {tms in
-            //            sefnt(tms![5].name)
-        }, teamId: "")
+            
+        }, yvDoc: yvDoc!)
+        
+        let alertController = UIAlertController(title: "Successfully Downloaded", message:
+            "Your Document Was Successfully Downloaded", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+        
+        self.present(alertController, animated: true, completion: nil)
         
     }
     

@@ -17,18 +17,6 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         let juuv = JuuvisRestClient()
 
         
-//        juuv.downloadDoc(completion: {tms in
-//            //            self.teamSocialList = tms!
-//            //            self.tableView.reloadData()
-//            //            print(tms![5].name)
-//        }, teamId: "")
-        
-        juuv.uploadDoc(tags: "", onCompletion: {tms in
-            //            self.(tms![5].name)
-        }, onError: {tms in
-            //            selnt(tms![5].name)
-        })
-        
         delegate = self
         
         allowsDocumentCreation = true
