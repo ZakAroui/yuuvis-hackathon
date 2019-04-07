@@ -17,26 +17,16 @@ class SearchDocsTableViewCell: UITableViewCell {
 class SearchDocsTableVC: UITableViewController {
     var docList: [YuuvisDoc] = []
     var yvDoc: YuuvisDoc?
+    var terms: String? = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let tbvc = self.tabBarController  as! TeamInfoTBC
-//        team = tbvc.team
-//
-//        let ruwt = RuwtRestClient()
-//        ruwt.getTeamAssets(completion: {tms in
-//            self.docList = tms!
-//            self.tableView.reloadData()
-//        }, teamId: String(team!.teamID))
-        
-        let terms: String = ""
         
         let juuv = JuuvisRestClient()
         juuv.searchDocs(completion: {tms in
             self.docList = tms!
             self.tableView.reloadData()
-        }, terms: terms)
+        }, terms: terms ?? "")
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

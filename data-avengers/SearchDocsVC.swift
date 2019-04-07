@@ -11,18 +11,30 @@ import SwiftGoogleTranslate
 
 class SearchDocsVC: UIViewController {
     let juuv = JuuvisRestClient()
-
+    var terms: String = ""
+    
     @IBOutlet weak var searchTerms: UITextField!
     @IBAction func searchBtn(_ sender: Any) {
         print("search clicked")
         
-        let terms: String = searchTerms.text!
-        
-        juuv.searchDocs(completion: {tms in
-            
-        }, terms: terms)
-        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+        case "showSearch":
+            print("inside showsearch")
+            
+            let tabBarC : SearchDocsTableVC = segue.destination as! SearchDocsTableVC;
+            
+            tabBarC.terms = searchTerms.text!
+            
+        default:
+            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
