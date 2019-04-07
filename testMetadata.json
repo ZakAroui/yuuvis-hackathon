@@ -1,0 +1,17 @@
+{
+    "objects": [{
+        "properties": {
+            "enaio:objectTypeId": {
+                "value": "taggeddocument"
+            },
+            "tags":{
+                "value": ["1", "2"]
+            }
+        },
+        "contentStreams": [{
+            "cid": "cid_63apple",
+            "fileName": "test.txt"
+        }]
+    }
+  ]
+}

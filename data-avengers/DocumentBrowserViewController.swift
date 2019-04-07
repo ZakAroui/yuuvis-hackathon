@@ -14,6 +14,21 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let juuv = JuuvisRestClient()
+
+        
+//        juuv.downloadDoc(completion: {tms in
+//            //            self.teamSocialList = tms!
+//            //            self.tableView.reloadData()
+//            //            print(tms![5].name)
+//        }, teamId: "")
+        
+        juuv.uploadDoc(imageData: nil, onCompletion: {tms in
+            //            self.(tms![5].name)
+        }, onError: {tms in
+            //            selnt(tms![5].name)
+        })
+        
         delegate = self
         
         allowsDocumentCreation = true

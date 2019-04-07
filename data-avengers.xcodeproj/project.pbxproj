@@ -14,8 +14,29 @@
 		0D7CE8F222591F510097C674 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D7CE8F022591F510097C674 /* Main.storyboard */; };
 		0D7CE8F422591F530097C674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D7CE8F322591F530097C674 /* Assets.xcassets */; };
 		0D7CE8F722591F530097C674 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D7CE8F522591F530097C674 /* LaunchScreen.storyboard */; };
+		0D7CE900225944370097C674 /* JuuvisRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CE8FF225944370097C674 /* JuuvisRestClient.swift */; };
+		0D7CE903225989110097C674 /* YuuvisDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CE902225989110097C674 /* YuuvisDoc.swift */; };
+		0D7CE90522598AA80097C674 /* YvProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CE90422598AA80097C674 /* YvProperties.swift */; };
+		0D7CE90722599D240097C674 /* YvTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CE90622599D240097C674 /* YvTag.swift */; };
+		0D7CE90922599E190097C674 /* YvContentStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CE90822599E190097C674 /* YvContentStream.swift */; };
+		0D7CE90E225A1A810097C674 /* testMetadata.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D7CE90D225A1A810097C674 /* testMetadata.json */; };
+		0D7CE910225A1AC00097C674 /* Team_Star-Track.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D7CE90F225A1ABF0097C674 /* Team_Star-Track.jpg */; };
 		D9B588A55D2B63280A8E7C58 /* Pods_data_avengers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F729833F9F374EA973A371 /* Pods_data_avengers.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0D7CE90A225A1A0F0097C674 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				0D7CE90E225A1A810097C674 /* testMetadata.json in CopyFiles */,
+				0D7CE910225A1AC00097C674 /* Team_Star-Track.jpg in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		050D2898EC19807FE46871CF /* Pods-data-avengers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-data-avengers.debug.xcconfig"; path = "Target Support Files/Pods-data-avengers/Pods-data-avengers.debug.xcconfig"; sourceTree = "<group>"; };
@@ -28,6 +49,13 @@
 		0D7CE8F322591F530097C674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D7CE8F622591F530097C674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D7CE8F822591F530097C674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D7CE8FF225944370097C674 /* JuuvisRestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuuvisRestClient.swift; sourceTree = "<group>"; };
+		0D7CE902225989110097C674 /* YuuvisDoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuuvisDoc.swift; sourceTree = "<group>"; };
+		0D7CE90422598AA80097C674 /* YvProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YvProperties.swift; sourceTree = "<group>"; };
+		0D7CE90622599D240097C674 /* YvTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YvTag.swift; sourceTree = "<group>"; };
+		0D7CE90822599E190097C674 /* YvContentStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YvContentStream.swift; sourceTree = "<group>"; };
+		0D7CE90D225A1A810097C674 /* testMetadata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testMetadata.json; sourceTree = "<group>"; };
+		0D7CE90F225A1ABF0097C674 /* Team_Star-Track.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Team_Star-Track.jpg"; sourceTree = "<group>"; };
 		31A132A7FC9E26ABB8119B1D /* Pods-data-avengers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-data-avengers.release.xcconfig"; path = "Target Support Files/Pods-data-avengers/Pods-data-avengers.release.xcconfig"; sourceTree = "<group>"; };
 		82F729833F9F374EA973A371 /* Pods_data_avengers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_data_avengers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -50,13 +78,14 @@
 				050D2898EC19807FE46871CF /* Pods-data-avengers.debug.xcconfig */,
 				31A132A7FC9E26ABB8119B1D /* Pods-data-avengers.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		0D7CE8DC22591F510097C674 = {
 			isa = PBXGroup;
 			children = (
+				0D7CE90F225A1ABF0097C674 /* Team_Star-Track.jpg */,
+				0D7CE90D225A1A810097C674 /* testMetadata.json */,
 				0D7CE8E722591F510097C674 /* data-avengers */,
 				0D7CE8E622591F510097C674 /* Products */,
 				0765B724AD5CF5B1AD98E1A8 /* Pods */,
@@ -76,7 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				0D7CE8E822591F510097C674 /* AppDelegate.swift */,
+				0D7CE8FE225944190097C674 /* service */,
 				0D7CE8EA22591F510097C674 /* DocumentBrowserViewController.swift */,
+				0D7CE901225988B20097C674 /* model */,
 				0D7CE8EC22591F510097C674 /* DocumentViewController.swift */,
 				0D7CE8EE22591F510097C674 /* Document.swift */,
 				0D7CE8F022591F510097C674 /* Main.storyboard */,
@@ -85,6 +116,25 @@
 				0D7CE8F822591F530097C674 /* Info.plist */,
 			);
 			path = "data-avengers";
+			sourceTree = "<group>";
+		};
+		0D7CE8FE225944190097C674 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				0D7CE8FF225944370097C674 /* JuuvisRestClient.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		0D7CE901225988B20097C674 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				0D7CE902225989110097C674 /* YuuvisDoc.swift */,
+				0D7CE90622599D240097C674 /* YvTag.swift */,
+				0D7CE90822599E190097C674 /* YvContentStream.swift */,
+				0D7CE90422598AA80097C674 /* YvProperties.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		C5DED1C81C7B6B65E744CBB9 /* Frameworks */ = {
@@ -107,6 +157,7 @@
 				0D7CE8E222591F510097C674 /* Frameworks */,
 				0D7CE8E322591F510097C674 /* Resources */,
 				781C23CB4B43D5A0BDDCAD31 /* [CP] Embed Pods Frameworks */,
+				0D7CE90A225A1A0F0097C674 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -173,12 +224,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-data-avengers/Pods-data-avengers-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftGoogleTranslate/SwiftGoogleTranslate.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGoogleTranslate.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,9 +268,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D7CE90522598AA80097C674 /* YvProperties.swift in Sources */,
+				0D7CE90722599D240097C674 /* YvTag.swift in Sources */,
 				0D7CE8EF22591F510097C674 /* Document.swift in Sources */,
+				0D7CE903225989110097C674 /* YuuvisDoc.swift in Sources */,
 				0D7CE8ED22591F510097C674 /* DocumentViewController.swift in Sources */,
+				0D7CE900225944370097C674 /* JuuvisRestClient.swift in Sources */,
 				0D7CE8EB22591F510097C674 /* DocumentBrowserViewController.swift in Sources */,
+				0D7CE90922599E190097C674 /* YvContentStream.swift in Sources */,
 				0D7CE8E922591F510097C674 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
