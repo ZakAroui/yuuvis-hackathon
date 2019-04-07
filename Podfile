@@ -7,5 +7,7 @@ target 'data-avengers' do
 
   # Pods for data-avengers
   pod 'SwiftGoogleTranslate'
+  
+  pod 'Alamofire', '~> 4.7'
 
 end
