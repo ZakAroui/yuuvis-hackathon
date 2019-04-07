@@ -130,8 +130,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="DocumentImage" destination="Z2c-wr-e9X" id="xRU-CO-vwg"/>
-                                    <outlet property="DocumentName" destination="gaj-bx-dLU" id="K7K-rE-jD4"/>
+                                    <outlet property="documentLabel" destination="gaj-bx-dLU" id="hlI-Gs-rWu"/>
+                                    <outlet property="documentPreview" destination="Z2c-wr-e9X" id="Yfw-gR-Bec"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

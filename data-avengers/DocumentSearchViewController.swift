@@ -25,6 +25,7 @@ class DocumentSearchViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+      
     }
     
     
@@ -43,10 +44,10 @@ class DocumentSearchViewController: UIViewController {
     }
     
     
-    
     func transitionToDisplayResults(_ sender: UIButton)
     { // get documents to display and segue into tableViewcController
         performSegue(withIdentifier: "SegueToDisplayResults", sender: sender)
+        
     }
     // --------------------------------------------------------------
 }
