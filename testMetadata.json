@@ -5,7 +5,7 @@
                 "value": "taggeddocument"
             },
             "tags":{
-                "value": ["1", "2"]
+                "value": ["hello", "world"]
             }
         },
         "contentStreams": [{

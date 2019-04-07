@@ -47,8 +47,10 @@ class JuuvisRestClient {
         }
     }
     
-    func searchDocs(completion: @escaping ([YuuvisDoc]?) -> Void, teamId: String){
+    func searchDocs(completion: @escaping ([YuuvisDoc]?) -> Void, terms: String){
 //        let thisTeamSocial = teamSocial + teamId
+        
+        var whereClose: String = "where tenNyc007:tags like '%"+terms+"%'"
         
         let headers: HTTPHeaders = [
             "Authorization": "Basic YWRtaW46cmp1TVBBTFdjblVT",
@@ -58,7 +60,7 @@ class JuuvisRestClient {
         ]
         
         let parameters: Parameters = [
-            "statement": "SELECT * FROM enaio:object",
+            "statement": "SELECT * FROM enaio:object "+whereClose,
             "skipCount": 0,
             "maxItems": 50
         ]
@@ -82,10 +84,10 @@ class JuuvisRestClient {
                 
                 print("we are at search")
                 
-//                let teamSocials = results.compactMap { socialDict in
-//                    return TeamSocial(jsonData: socialDict) }
-//
-//                completion(teamSocials)
+                let docList = results.compactMap { docDict in
+                    return YuuvisDoc(jsonData: docDict) }
+
+                completion(docList)
         }
     }
     
@@ -129,7 +131,11 @@ class JuuvisRestClient {
         }
     }
     
-    func uploadDoc(imageData: Data?, onCompletion: ((String?) -> Void)? = nil, onError: ((Error?) -> Void)? = nil){
+    func uploadDoc(tags: String?, onCompletion: ((String?) -> Void)? = nil, onError: ((Error?) -> Void)? = nil){
+        
+        let tagslist = tags!.characters.split(separator: ",").map(String.init)
+//        let var1: String = tagslist[0] // First
+//        let var2: String = tagslist[1] // Last
         
         let headers: HTTPHeaders = [
             "Authorization": "Basic YWRtaW46cmp1TVBBTFdjblVT",
@@ -139,7 +145,7 @@ class JuuvisRestClient {
         ]
         
         let dataUrl = Bundle.main.url(forResource: "testMetadata", withExtension: "json")
-        let fileUrl = Bundle.main.url(forResource: "Team_Star-Track", withExtension: "jpg")
+        let fileUrl = Bundle.main.url(forResource: "The Challenges", withExtension: "jpg")
         
         Alamofire.upload(multipartFormData: { multipartFormData in
             multipartFormData.append(dataUrl!, withName: "data")

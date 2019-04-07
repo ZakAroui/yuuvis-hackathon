@@ -23,7 +23,7 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
 //            //            print(tms![5].name)
 //        }, teamId: "")
         
-        juuv.uploadDoc(imageData: nil, onCompletion: {tms in
+        juuv.uploadDoc(tags: "", onCompletion: {tms in
             //            self.(tms![5].name)
         }, onError: {tms in
             //            selnt(tms![5].name)

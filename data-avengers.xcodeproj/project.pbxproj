@@ -21,6 +21,11 @@
 		0D7CE90922599E190097C674 /* YvContentStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CE90822599E190097C674 /* YvContentStream.swift */; };
 		0D7CE90E225A1A810097C674 /* testMetadata.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D7CE90D225A1A810097C674 /* testMetadata.json */; };
 		0D7CE910225A1AC00097C674 /* Team_Star-Track.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D7CE90F225A1ABF0097C674 /* Team_Star-Track.jpg */; };
+		0D7CE912225A26160097C674 /* UploadDocVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CE911225A26160097C674 /* UploadDocVC.swift */; };
+		0D7CE914225A2C380097C674 /* The Challenges.docx in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D7CE913225A2C370097C674 /* The Challenges.docx */; };
+		0D7CE916225A2C800097C674 /* SearchDocsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CE915225A2C800097C674 /* SearchDocsVC.swift */; };
+		0D7CE918225A342C0097C674 /* SearchDocsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CE917225A342B0097C674 /* SearchDocsTableVC.swift */; };
+		0D7CE91A225A3CB00097C674 /* YvObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CE919225A3CB00097C674 /* YvObject.swift */; };
 		D9B588A55D2B63280A8E7C58 /* Pods_data_avengers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F729833F9F374EA973A371 /* Pods_data_avengers.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +38,7 @@
 			files = (
 				0D7CE90E225A1A810097C674 /* testMetadata.json in CopyFiles */,
 				0D7CE910225A1AC00097C674 /* Team_Star-Track.jpg in CopyFiles */,
+				0D7CE914225A2C380097C674 /* The Challenges.docx in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +62,11 @@
 		0D7CE90822599E190097C674 /* YvContentStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YvContentStream.swift; sourceTree = "<group>"; };
 		0D7CE90D225A1A810097C674 /* testMetadata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testMetadata.json; sourceTree = "<group>"; };
 		0D7CE90F225A1ABF0097C674 /* Team_Star-Track.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Team_Star-Track.jpg"; sourceTree = "<group>"; };
+		0D7CE911225A26160097C674 /* UploadDocVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDocVC.swift; sourceTree = "<group>"; };
+		0D7CE913225A2C370097C674 /* The Challenges.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The Challenges.docx"; sourceTree = "<group>"; };
+		0D7CE915225A2C800097C674 /* SearchDocsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDocsVC.swift; sourceTree = "<group>"; };
+		0D7CE917225A342B0097C674 /* SearchDocsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDocsTableVC.swift; sourceTree = "<group>"; };
+		0D7CE919225A3CB00097C674 /* YvObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YvObject.swift; sourceTree = "<group>"; };
 		31A132A7FC9E26ABB8119B1D /* Pods-data-avengers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-data-avengers.release.xcconfig"; path = "Target Support Files/Pods-data-avengers/Pods-data-avengers.release.xcconfig"; sourceTree = "<group>"; };
 		82F729833F9F374EA973A371 /* Pods_data_avengers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_data_avengers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,6 +95,7 @@
 		0D7CE8DC22591F510097C674 = {
 			isa = PBXGroup;
 			children = (
+				0D7CE913225A2C370097C674 /* The Challenges.docx */,
 				0D7CE90F225A1ABF0097C674 /* Team_Star-Track.jpg */,
 				0D7CE90D225A1A810097C674 /* testMetadata.json */,
 				0D7CE8E722591F510097C674 /* data-avengers */,
@@ -107,6 +119,9 @@
 				0D7CE8E822591F510097C674 /* AppDelegate.swift */,
 				0D7CE8FE225944190097C674 /* service */,
 				0D7CE8EA22591F510097C674 /* DocumentBrowserViewController.swift */,
+				0D7CE911225A26160097C674 /* UploadDocVC.swift */,
+				0D7CE915225A2C800097C674 /* SearchDocsVC.swift */,
+				0D7CE917225A342B0097C674 /* SearchDocsTableVC.swift */,
 				0D7CE901225988B20097C674 /* model */,
 				0D7CE8EC22591F510097C674 /* DocumentViewController.swift */,
 				0D7CE8EE22591F510097C674 /* Document.swift */,
@@ -131,6 +146,7 @@
 			children = (
 				0D7CE902225989110097C674 /* YuuvisDoc.swift */,
 				0D7CE90622599D240097C674 /* YvTag.swift */,
+				0D7CE919225A3CB00097C674 /* YvObject.swift */,
 				0D7CE90822599E190097C674 /* YvContentStream.swift */,
 				0D7CE90422598AA80097C674 /* YvProperties.swift */,
 			);
@@ -268,15 +284,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D7CE912225A26160097C674 /* UploadDocVC.swift in Sources */,
 				0D7CE90522598AA80097C674 /* YvProperties.swift in Sources */,
 				0D7CE90722599D240097C674 /* YvTag.swift in Sources */,
 				0D7CE8EF22591F510097C674 /* Document.swift in Sources */,
+				0D7CE916225A2C800097C674 /* SearchDocsVC.swift in Sources */,
 				0D7CE903225989110097C674 /* YuuvisDoc.swift in Sources */,
 				0D7CE8ED22591F510097C674 /* DocumentViewController.swift in Sources */,
 				0D7CE900225944370097C674 /* JuuvisRestClient.swift in Sources */,
 				0D7CE8EB22591F510097C674 /* DocumentBrowserViewController.swift in Sources */,
+				0D7CE918225A342C0097C674 /* SearchDocsTableVC.swift in Sources */,
 				0D7CE90922599E190097C674 /* YvContentStream.swift in Sources */,
 				0D7CE8E922591F510097C674 /* AppDelegate.swift in Sources */,
+				0D7CE91A225A3CB00097C674 /* YvObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
