@@ -96,20 +96,20 @@ class JuuvisRestClient {
         
         let headers: HTTPHeaders = [
             "Authorization": "Basic YWRtaW46cmp1TVBBTFdjblVT",
-            "Accept": "application/json",
+//            "Accept": "application/json",
             "Content-Type": "application/json",
             "X-ID-TENANT-NAME": "nyc007"
         ]
         
-        let destination = DownloadRequest.suggestedDownloadDestination()
+//        let destination = DownloadRequest.suggestedDownloadDestination()
         
-//        let dest: DownloadRequest.DownloadFileDestination = { _, _ in
-//            var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-//            documentsURL.appendPathComponent("_yuuvis")
-//            return (documentsURL, [.removePreviousFile])
-//        }
+        let dest: DownloadRequest.DownloadFileDestination = { _, _ in
+            var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            documentsURL.appendPathComponent("_yuuvis")
+            return (documentsURL, [.removePreviousFile])
+        }
         
-        Alamofire.download(yvDocContent, method: .get, headers: headers, to: destination)
+        Alamofire.download(yvDocContent, method: .get, headers: headers, to: dest)
             .responseJSON { response in
                 guard response.result.isSuccess else {
                     print("couldn't get /content")

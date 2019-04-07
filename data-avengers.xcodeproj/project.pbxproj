@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D5C8DC1225A407000FFD589 /* SearchDocsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C8DC0225A407000FFD589 /* SearchDocsVC.swift */; };
+		0D5C8DC3225A48D100FFD589 /* ShowDocVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C8DC2225A48D100FFD589 /* ShowDocVC.swift */; };
 		0D7CE8E922591F510097C674 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CE8E822591F510097C674 /* AppDelegate.swift */; };
 		0D7CE8EB22591F510097C674 /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CE8EA22591F510097C674 /* DocumentBrowserViewController.swift */; };
 		0D7CE8ED22591F510097C674 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CE8EC22591F510097C674 /* DocumentViewController.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		050D2898EC19807FE46871CF /* Pods-data-avengers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-data-avengers.debug.xcconfig"; path = "Target Support Files/Pods-data-avengers/Pods-data-avengers.debug.xcconfig"; sourceTree = "<group>"; };
 		0D5C8DC0225A407000FFD589 /* SearchDocsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDocsVC.swift; sourceTree = "<group>"; };
+		0D5C8DC2225A48D100FFD589 /* ShowDocVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDocVC.swift; sourceTree = "<group>"; };
 		0D7CE8E522591F510097C674 /* data-avengers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "data-avengers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7CE8E822591F510097C674 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D7CE8EA22591F510097C674 /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				0D7CE8FE225944190097C674 /* service */,
 				0D7CE8EA22591F510097C674 /* DocumentBrowserViewController.swift */,
 				0D7CE911225A26160097C674 /* UploadDocVC.swift */,
+				0D5C8DC2225A48D100FFD589 /* ShowDocVC.swift */,
 				0D7CE915225A2C800097C674 /* SearchDocNavC.swift */,
 				0D5C8DC0225A407000FFD589 /* SearchDocsVC.swift */,
 				0D7CE917225A342B0097C674 /* SearchDocsTableVC.swift */,
@@ -291,6 +294,7 @@
 				0D7CE90522598AA80097C674 /* YvProperties.swift in Sources */,
 				0D7CE90722599D240097C674 /* YvTag.swift in Sources */,
 				0D7CE8EF22591F510097C674 /* Document.swift in Sources */,
+				0D5C8DC3225A48D100FFD589 /* ShowDocVC.swift in Sources */,
 				0D7CE916225A2C800097C674 /* SearchDocNavC.swift in Sources */,
 				0D7CE903225989110097C674 /* YuuvisDoc.swift in Sources */,
 				0D7CE8ED22591F510097C674 /* DocumentViewController.swift in Sources */,

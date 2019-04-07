@@ -39,19 +39,18 @@ class SearchDocsTableVC: UITableViewController {
         switch(segue.identifier ?? "") {
         case "ShowDocInfo":
             print("inside showdocinfo")
-//            let webViewVC : WebViewVC = segue.destination as! WebViewVC;
-//
-//            guard let selectedAssetCell = sender as? TeamAssetTableViewCell else {
-//                fatalError("Unexpected sender: \(sender)")
-//            }
-//
-//            guard let indexPath = tableView.indexPath(for: selectedAssetCell) else {
-//                fatalError("The selected cell is not being displayed by the table")
-//            }
-//
-//            let selectedAsset = teamAssetList[indexPath.row]
-//            webViewVC.sourceVc = WebViewSource.asset
-//            webViewVC.teamAsset = selectedAsset
+            let showDocVC : ShowDocVC = segue.destination as! ShowDocVC;
+
+            guard let selectedDocCell = sender as? SearchDocsTableViewCell else {
+                fatalError("Unexpected sender: \(sender)")
+            }
+
+            guard let indexPath = tableView.indexPath(for: selectedDocCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+
+            let selectedDoc = docList[indexPath.row]
+            showDocVC.yvDoc = selectedDoc
             
         default:
             fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
