@@ -14,6 +14,10 @@
 		0D7CE8F222591F510097C674 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D7CE8F022591F510097C674 /* Main.storyboard */; };
 		0D7CE8F422591F530097C674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D7CE8F322591F530097C674 /* Assets.xcassets */; };
 		0D7CE8F722591F530097C674 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D7CE8F522591F530097C674 /* LaunchScreen.storyboard */; };
+		AC4B674222594B45007FFCC8 /* DocumentSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4B674122594B45007FFCC8 /* DocumentSearchViewController.swift */; };
+		AC4B674422597B53007FFCC8 /* QueryResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4B674322597B53007FFCC8 /* QueryResultsTableViewController.swift */; };
+		AC4B674622597D6C007FFCC8 /* UploadUserDocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4B674522597D6C007FFCC8 /* UploadUserDocumentModel.swift */; };
+		AC4C9493225947BD00362588 /* DocumentUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C9492225947BD00362588 /* DocumentUploadViewController.swift */; };
 		D9B588A55D2B63280A8E7C58 /* Pods_data_avengers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F729833F9F374EA973A371 /* Pods_data_avengers.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +34,10 @@
 		0D7CE8F822591F530097C674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31A132A7FC9E26ABB8119B1D /* Pods-data-avengers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-data-avengers.release.xcconfig"; path = "Target Support Files/Pods-data-avengers/Pods-data-avengers.release.xcconfig"; sourceTree = "<group>"; };
 		82F729833F9F374EA973A371 /* Pods_data_avengers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_data_avengers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC4B674122594B45007FFCC8 /* DocumentSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentSearchViewController.swift; sourceTree = "<group>"; };
+		AC4B674322597B53007FFCC8 /* QueryResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryResultsTableViewController.swift; sourceTree = "<group>"; };
+		AC4B674522597D6C007FFCC8 /* UploadUserDocumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadUserDocumentModel.swift; sourceTree = "<group>"; };
+		AC4C9492225947BD00362588 /* DocumentUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentUploadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +58,6 @@
 				050D2898EC19807FE46871CF /* Pods-data-avengers.debug.xcconfig */,
 				31A132A7FC9E26ABB8119B1D /* Pods-data-avengers.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -75,16 +82,28 @@
 		0D7CE8E722591F510097C674 /* data-avengers */ = {
 			isa = PBXGroup;
 			children = (
-				0D7CE8E822591F510097C674 /* AppDelegate.swift */,
+				AC4C9492225947BD00362588 /* DocumentUploadViewController.swift */,
+				AC4B674522597D6C007FFCC8 /* UploadUserDocumentModel.swift */,
+				AC4B674322597B53007FFCC8 /* QueryResultsTableViewController.swift */,
+				AC4B674122594B45007FFCC8 /* DocumentSearchViewController.swift */,
+				0D7CE8F022591F510097C674 /* Main.storyboard */,
+				AC4C94912259440700362588 /* Support Files */,
 				0D7CE8EA22591F510097C674 /* DocumentBrowserViewController.swift */,
 				0D7CE8EC22591F510097C674 /* DocumentViewController.swift */,
 				0D7CE8EE22591F510097C674 /* Document.swift */,
-				0D7CE8F022591F510097C674 /* Main.storyboard */,
-				0D7CE8F322591F530097C674 /* Assets.xcassets */,
-				0D7CE8F522591F530097C674 /* LaunchScreen.storyboard */,
 				0D7CE8F822591F530097C674 /* Info.plist */,
 			);
 			path = "data-avengers";
+			sourceTree = "<group>";
+		};
+		AC4C94912259440700362588 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0D7CE8E822591F510097C674 /* AppDelegate.swift */,
+				0D7CE8F322591F530097C674 /* Assets.xcassets */,
+				0D7CE8F522591F530097C674 /* LaunchScreen.storyboard */,
+			);
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 		C5DED1C81C7B6B65E744CBB9 /* Frameworks */ = {
@@ -218,7 +237,11 @@
 				0D7CE8EF22591F510097C674 /* Document.swift in Sources */,
 				0D7CE8ED22591F510097C674 /* DocumentViewController.swift in Sources */,
 				0D7CE8EB22591F510097C674 /* DocumentBrowserViewController.swift in Sources */,
+				AC4C9493225947BD00362588 /* DocumentUploadViewController.swift in Sources */,
+				AC4B674622597D6C007FFCC8 /* UploadUserDocumentModel.swift in Sources */,
 				0D7CE8E922591F510097C674 /* AppDelegate.swift in Sources */,
+				AC4B674222594B45007FFCC8 /* DocumentSearchViewController.swift in Sources */,
+				AC4B674422597B53007FFCC8 /* QueryResultsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +389,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7MFS7HF3VV;
 				INFOPLIST_FILE = "data-avengers/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -384,6 +408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7MFS7HF3VV;
 				INFOPLIST_FILE = "data-avengers/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
