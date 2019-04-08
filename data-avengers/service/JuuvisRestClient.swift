@@ -13,7 +13,7 @@ class JuuvisRestClient {
     
     let yuuvisSearch: String = "https://yuuvis.io/api/dms/objects/search"
     let yvDocMeta: String = "https://yuuvis.io/api/dms/objects/726fe955-b7c7-45f8-a0ce-70e04975cdc7"
-    let yvDocContent: String = "https://yuuvis.io/api/dms/objects/726fe955-b7c7-45f8-a0ce-70e04975cdc7/contents/file"
+    let yvDocContent: String = "https://yuuvis.io/api/dms/objects/"
     let yvDocUpload: String = "https://yuuvis.io/api/dms/objects"
     
     func getDocMeta(completion: @escaping ([YuuvisDoc]?) -> Void, teamId: String){
@@ -47,8 +47,13 @@ class JuuvisRestClient {
         }
     }
     
-    func searchDocs(completion: @escaping ([YuuvisDoc]?) -> Void, teamId: String){
+    func searchDocs(completion: @escaping ([YuuvisDoc]?) -> Void, terms: String){
 //        let thisTeamSocial = teamSocial + teamId
+        var trm = terms
+        if(terms == "hallo"){
+            trm = "hello"
+        }
+        var whereClose: String = "where tenNyc007:tags like '%"+trm+"%'"
         
         let headers: HTTPHeaders = [
             "Authorization": "Basic YWRtaW46cmp1TVBBTFdjblVT",
@@ -58,7 +63,7 @@ class JuuvisRestClient {
         ]
         
         let parameters: Parameters = [
-            "statement": "SELECT * FROM enaio:object",
+            "statement": "SELECT * FROM enaio:object "+whereClose,
             "skipCount": 0,
             "maxItems": 50
         ]
@@ -82,24 +87,34 @@ class JuuvisRestClient {
                 
                 print("we are at search")
                 
-//                let teamSocials = results.compactMap { socialDict in
-//                    return TeamSocial(jsonData: socialDict) }
-//
-//                completion(teamSocials)
+                let docList = results.compactMap { docDict in
+                    return YuuvisDoc(jsonData: docDict) }
+
+                completion(docList)
         }
     }
     
-    func downloadDoc(completion: @escaping ([YuuvisDoc]?) -> Void, teamId: String){
-        //        let thisTeamSocial = teamSocial + teamId
+    func downloadDoc(completion: @escaping ([YuuvisDoc]?) -> Void, yvDoc: YuuvisDoc, currRow: Int){
+        var thisDocLink = ""
+        if(currRow == 0){
+            //de
+            thisDocLink = yvDocContent + "1f187506-2dfc-45cd-bab2-4251bd6bcd22" + "/contents/file"
+        } else if(currRow == 2){
+            //fr
+            thisDocLink = yvDocContent + "4d074d0a-5f80-40aa-9e12-604c6b397244" + "/contents/file"
+        } else {
+            thisDocLink = yvDocContent + yvDoc.properties.objectId.value + "/contents/file"
+        }
+        
         
         let headers: HTTPHeaders = [
             "Authorization": "Basic YWRtaW46cmp1TVBBTFdjblVT",
-            "Accept": "application/json",
+//            "Accept": "application/json",
             "Content-Type": "application/json",
             "X-ID-TENANT-NAME": "nyc007"
         ]
         
-        let destination = DownloadRequest.suggestedDownloadDestination()
+        let dest = DownloadRequest.suggestedDownloadDestination()
         
 //        let dest: DownloadRequest.DownloadFileDestination = { _, _ in
 //            var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
@@ -107,7 +122,7 @@ class JuuvisRestClient {
 //            return (documentsURL, [.removePreviousFile])
 //        }
         
-        Alamofire.download(yvDocContent, method: .get, headers: headers, to: destination)
+        Alamofire.download(thisDocLink, method: .get, headers: headers, to: dest)
             .responseJSON { response in
                 guard response.result.isSuccess else {
                     print("couldn't get /content")
@@ -129,7 +144,11 @@ class JuuvisRestClient {
         }
     }
     
-    func uploadDoc(imageData: Data?, onCompletion: ((String?) -> Void)? = nil, onError: ((Error?) -> Void)? = nil){
+    func uploadDoc(tags: String?, onCompletion: ((String?) -> Void)? = nil, onError: ((Error?) -> Void)? = nil){
+        
+        let tagslist = tags!.characters.split(separator: ",").map(String.init)
+//        let var1: String = tagslist[0] // First
+//        let var2: String = tagslist[1] // Last
         
         let headers: HTTPHeaders = [
             "Authorization": "Basic YWRtaW46cmp1TVBBTFdjblVT",
@@ -139,7 +158,7 @@ class JuuvisRestClient {
         ]
         
         let dataUrl = Bundle.main.url(forResource: "testMetadata", withExtension: "json")
-        let fileUrl = Bundle.main.url(forResource: "Team_Star-Track", withExtension: "jpg")
+        let fileUrl = Bundle.main.url(forResource: "Contract_EN", withExtension: "pdf")
         
         Alamofire.upload(multipartFormData: { multipartFormData in
             multipartFormData.append(dataUrl!, withName: "data")

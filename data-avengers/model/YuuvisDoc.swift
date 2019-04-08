@@ -11,12 +11,14 @@ import Foundation
 class YuuvisDoc {
     
     var properties: YvProperties
-    var contentStreams: YvContentStream
+    var contentStreams: [YvContentStream]
     
     init(jsonData: [String: Any]) {
         self.properties = YvProperties(jsonData: jsonData["properties"] as! [String : Any])
-        self.contentStreams = YvContentStream(jsonData: jsonData["contentStreams"] as! [String : Any])
         
+        let sList = jsonData["contentStreams"] as? [[String: Any]] ?? []
+        self.contentStreams = sList.compactMap { s in
+            return YvContentStream(jsonData: s) }
     }
     
 }
