@@ -57,11 +57,15 @@
                                     <constraint firstAttribute="height" constant="128" id="AEY-qZ-5V7"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yuuvis_logo" translatesAutoresizingMaskIntoConstraints="NO" id="vWD-pp-TuK">
+                                <rect key="frame" x="0.0" y="79" width="375" height="68"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="clR-Qu-FqI" firstAttribute="top" secondItem="kMN-Yl-9Pk" secondAttribute="bottom" constant="57" id="1hL-26-U8e"/>
                             <constraint firstAttribute="trailing" secondItem="BNT-IA-6xN" secondAttribute="trailing" id="6tU-Fr-5yc"/>
+                            <constraint firstItem="xLf-Of-XcV" firstAttribute="trailing" secondItem="vWD-pp-TuK" secondAttribute="trailing" id="ASx-IW-Zs8"/>
                             <constraint firstItem="BNT-IA-6xN" firstAttribute="top" secondItem="xLf-Of-XcV" secondAttribute="top" id="BD8-MR-wOU"/>
                             <constraint firstItem="xLf-Of-XcV" firstAttribute="trailing" secondItem="eYo-rQ-VAw" secondAttribute="trailing" constant="65" id="HxS-Ns-ixg"/>
                             <constraint firstItem="kMN-Yl-9Pk" firstAttribute="top" secondItem="eYo-rQ-VAw" secondAttribute="bottom" constant="79" id="L46-eq-uFx"/>
@@ -70,8 +74,10 @@
                             <constraint firstItem="BNT-IA-6xN" firstAttribute="leading" secondItem="Kgd-DS-HcO" secondAttribute="leading" id="WPR-MF-owm"/>
                             <constraint firstItem="eYo-rQ-VAw" firstAttribute="leading" secondItem="xLf-Of-XcV" secondAttribute="leading" constant="70" id="kyV-VF-O7R"/>
                             <constraint firstItem="eYo-rQ-VAw" firstAttribute="leading" secondItem="kMN-Yl-9Pk" secondAttribute="leading" id="l2s-HF-088"/>
+                            <constraint firstItem="vWD-pp-TuK" firstAttribute="leading" secondItem="xLf-Of-XcV" secondAttribute="leading" id="pbD-fQ-nFB"/>
                             <constraint firstItem="BNT-IA-6xN" firstAttribute="centerX" secondItem="kMN-Yl-9Pk" secondAttribute="centerX" id="rB2-WZ-w1j"/>
                             <constraint firstItem="BNT-IA-6xN" firstAttribute="bottom" secondItem="xLf-Of-XcV" secondAttribute="bottom" id="xAk-g2-HOz"/>
+                            <constraint firstItem="vWD-pp-TuK" firstAttribute="top" secondItem="xLf-Of-XcV" secondAttribute="top" constant="15" id="zlj-zY-tBM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xLf-Of-XcV"/>
                     </view>
@@ -122,14 +128,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yuuvis_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ki0-yd-6fq">
+                                <rect key="frame" x="0.0" y="35" width="375" height="68"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="f0x-qB-ruh" firstAttribute="trailing" secondItem="Ki0-yd-6fq" secondAttribute="trailing" id="24X-uK-bxM"/>
                             <constraint firstItem="bj3-4B-afD" firstAttribute="top" secondItem="ZNr-mr-unV" secondAttribute="bottom" constant="26" id="6Y5-HK-yy5"/>
                             <constraint firstItem="WB7-XP-W9U" firstAttribute="centerX" secondItem="lwa-k3-7OE" secondAttribute="centerX" id="7bG-h2-gYC"/>
                             <constraint firstItem="WB7-XP-W9U" firstAttribute="centerX" secondItem="QaG-Nl-uY2" secondAttribute="centerX" id="Kad-Uf-qHU"/>
                             <constraint firstItem="WB7-XP-W9U" firstAttribute="centerX" secondItem="ZNr-mr-unV" secondAttribute="centerX" id="Njf-wf-0XL"/>
                             <constraint firstItem="QaG-Nl-uY2" firstAttribute="trailing" secondItem="f0x-qB-ruh" secondAttribute="trailing" id="Onb-Ny-mZS"/>
+                            <constraint firstItem="Ki0-yd-6fq" firstAttribute="top" secondItem="f0x-qB-ruh" secondAttribute="top" constant="15" id="PEq-jb-U0e"/>
                             <constraint firstItem="QaG-Nl-uY2" firstAttribute="leading" secondItem="f0x-qB-ruh" secondAttribute="leading" id="Tcu-oH-jyK"/>
                             <constraint firstItem="WB7-XP-W9U" firstAttribute="leading" secondItem="bj3-4B-afD" secondAttribute="leading" id="Uoa-3i-Vwh"/>
                             <constraint firstItem="WB7-XP-W9U" firstAttribute="trailing" secondItem="bj3-4B-afD" secondAttribute="trailing" id="Wmx-JM-Jz3"/>
@@ -137,6 +148,7 @@
                             <constraint firstItem="QaG-Nl-uY2" firstAttribute="top" secondItem="f0x-qB-ruh" secondAttribute="top" id="bUq-uO-2nZ"/>
                             <constraint firstItem="WB7-XP-W9U" firstAttribute="top" secondItem="f0x-qB-ruh" secondAttribute="top" constant="163" id="cGl-Nk-Agb"/>
                             <constraint firstItem="QaG-Nl-uY2" firstAttribute="bottom" secondItem="f0x-qB-ruh" secondAttribute="bottom" id="fUf-yT-mwX"/>
+                            <constraint firstItem="Ki0-yd-6fq" firstAttribute="leading" secondItem="f0x-qB-ruh" secondAttribute="leading" id="g3a-A7-2EB"/>
                             <constraint firstItem="WB7-XP-W9U" firstAttribute="leading" secondItem="f0x-qB-ruh" secondAttribute="leading" constant="67" id="iLL-YG-FTh"/>
                             <constraint firstItem="ZNr-mr-unV" firstAttribute="top" secondItem="WB7-XP-W9U" secondAttribute="bottom" constant="28" id="iMP-Fd-MKP"/>
                         </constraints>
@@ -387,5 +399,6 @@
         <image name="search_icon" width="1024" height="1024"/>
         <image name="upload_icon" width="512" height="512"/>
         <image name="yuuvis" width="3456" height="4343"/>
+        <image name="yuuvis_logo" width="270" height="68"/>
     </resources>
 </document>
